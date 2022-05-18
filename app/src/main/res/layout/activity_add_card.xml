@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layAddCard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="10dp"
+    tools:context=".AddCard">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gothica1_regular"
+        android:text="Choose a question type"
+        android:textColor="@color/white"
+        app:layout_constraintBaseline_toBaselineOf="@+id/spTypes"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spTypes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/TextWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <FrameLayout
+        android:id="@+id/flFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:layout_editor_absoluteX="-108dp" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/ButtonBlue"
+        android:text="Add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edTitle" />
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+
+        android:fontFamily="@font/gothica1_regular"
+        android:text="Category"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flFragment" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/gothica1_regular"
+        android:text="Title"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edCategory" />
+
+    <EditText
+        android:id="@+id/edTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/AquaBlue"
+        android:maxLength="15"
+        android:textColor="@color/TextWhite"
+        android:textColorHint="@color/AquaBlue"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <EditText
+        android:id="@+id/edCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/AquaBlue"
+        android:maxLength="10"
+        android:textColor="@color/TextWhite"
+        android:textColorHint="@color/AquaBlue"
+        app:layout_constraintStart_toEndOf="@+id/tvCategory"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
+</androidx.constraintlayout.widget.ConstraintLayout>
